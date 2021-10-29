@@ -1,8 +1,14 @@
+
+
 .user__list {
 	
 }
+ul {
+    padding-left: 0;
+}
 
 .user__item {
+	
 	display: grid;
 	justify-content: center;
 	align-items: center;
@@ -15,6 +21,8 @@
 	grid-template-areas: "logo name balanc updated dropdown";
 	font-size: calc(7.5px + 7.5 * (100vw / 1920));
 	line-height: 133%;
+	cursor: pointer;
+	
 }
 
 .item__image {

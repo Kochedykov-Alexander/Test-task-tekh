@@ -104,3 +104,8 @@ h6 {
           flex-direction: column;
   
 }
+
+.container-fluid {
+  padding: 0 !important;
+}
+
