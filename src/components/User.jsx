@@ -24,14 +24,14 @@ export default function User({user, modalActive, setModalActive}) {
 	
 	return (
 				<div className="user__column">
-						<li className="user__item item" key={user.id} onClick={() => setModalActive(true)}>
-							<div className="item__image">
+						<li className="user__item item row d-md-flex flex-direction-md-column .align-items-md-center" key={user.id} onClick={() => setModalActive(true)}>
+							<div className="item__image col-12 col-md-1">
 								<img src={avatar} alt="" />
 							</div>
-							<div className="item__name">{user.fname} {user.name.charAt(0)}. {user.mname.charAt(0)}.</div>
-							<div className="item__balance">Баланс: {Math.round(user.balance * Math.pow(10, 2)) / Math.pow(10, 2)}</div>
-							<div className="item__last-updated">Последнее изменение: {moment(user.lastUpdatedAt).fromNow()}</div>
-							<div class="item__dropdown" onClick = {e => e.stopPropagation()}>
+							<div className="item__name col-12 col-md-2 my-1">{user.fname} {user.name.charAt(0)}. {user.mname.charAt(0)}.</div>
+							<div className="item__balance col-12 col-md-2 my-1">Баланс: {Math.round(user.balance * Math.pow(10, 2)) / Math.pow(10, 2)}</div>
+							<div className="item__last-updated col-12 col-md-5 my-1">Последнее изменение: {moment(user.lastUpdatedAt).fromNow()}</div>
+							<div class="item__dropdown col-12 col-md-2 my-1" onClick = {e => e.stopPropagation()}>
 								<button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
 									{statusMap.get(user.status)}
 								</button>
