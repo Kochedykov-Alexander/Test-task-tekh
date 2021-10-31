@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import User from '../../User'
 import '../../../scss/tabs.css'
-import Modal from '../Modal/Modal';
+
 
 export default function TabContent({users}) {
 
@@ -16,10 +16,8 @@ export default function TabContent({users}) {
 	return (
 		
 		<div className="tab-content">
-	  		{users.map(item => <ul className="user__list"><User getSelected = {getSelected} user = {item} modalActive = {modalActive} setModalActive = {setModalActive}/></ul>)}
-			  {requiredItem &&
-				<Modal requiredItem = {requiredItem} modalActive = {modalActive} setModalActive = {setModalActive}/>
-			  }
+	  		<ul className="user__list">{users.map(item => <User setReruiredItem = {setReruiredItem} requiredItem = {requiredItem} getSelected = {getSelected} user = {item} modalActive = {modalActive} setModalActive = {setModalActive}/>)}</ul>
+			
 	  	</div>
 		
 	)

@@ -1,16 +1,16 @@
-import React, {useState, useEffect} from 'react'
+import React, {useEffect} from 'react'
+import { useDispatch, useSelector } from 'react-redux';
 import UserService from '../API/UserService'
 import Loader from '../components/UI/Loader/Loader';
 import Tabs from '../components/UI/Tab/Tabs';
-import User from '../components/User'
 import { useFetching } from '../hooks/useFetching';
-import '../scss/user_list.css'
+import { setUsers } from '../store/reducers/usersReducer';
 
 export default function UserList() {
 
 	
-
-	const [users, setUsers] = useState([]);
+	const users = useSelector(state => state.users.users)
+	const dispatch = useDispatch();
 	
 
 	const items = [
@@ -20,31 +20,31 @@ export default function UserList() {
 	];
 
 	const [fetchUsers, loading, errors] = useFetching(async () => {
-
-		const usersApi = await UserService.getAll()
-		setUsers(usersApi)
+		let usersApi = await UserService.getAll()
+		dispatch(setUsers(usersApi));
 	  })
 
+	  
+
 	useEffect(() => {
-		fetchUsers()	
+		fetchUsers()
 	}, [])
+
+	
 
 	return (
 
 		<div className="row">
 			<div className="user col-12">
-			{errors && (
-          		<h1>Ошибка! ${errors}</h1> )
-        	}
+				{errors && (
+					<h1>Ошибка! ${errors}</h1> )
+				}
 			
-			{loading ? 
-      		<Loader/>
-				: 
-			<Tabs items={items}/>
-			 
-				
-			}
-			
+				{loading ? 
+				<Loader/>
+					: 
+				<Tabs items={items}/>	
+				}
 			</div>
 		</div>
 	)

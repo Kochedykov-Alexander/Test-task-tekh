@@ -1,15 +1,21 @@
 
-
-.user__list {
-	
-}
 ul {
     padding-left: 0;
 }
 
+.btn:focus {
+	outline: none !important;
+   	box-shadow:none
+}
+
+.user__list > * {
+	margin-top: 18px;
+	box-shadow: 0px 7px 64px rgba(0, 0, 0, 0.07);
+}
+
 .user__item {
 	
-
+	color: #000;
 	justify-content: center;
 	align-items: center; 
 	background: #FFFFFF;
@@ -22,7 +28,7 @@ ul {
 }
 
 .item__image {
-	grid-area: logo;
+	
 	width: 48px;
 	height: 48px;
 	position: relative;
@@ -38,24 +44,28 @@ ul {
 }
 
 .item__name {
-	grid-area: name;
 }
 
 .item__balance {
-	grid-area: balanc;
 }
 
 .item__dropdown-2 {
+	
 	border: none;
 	color: #3F3356;
-	text-align: end;
-	grid-area: dropdown;
 	border: none;
 }
 
+.dropdown-menu {
+	background: #FFFFFF;
+	box-shadow: 0px 7px 64px rgba(0, 0, 0, 0.07);
+	border-radius: 6px;
+}
+
+
 .item__last-updated {
-	grid-area: updated;
-	text-align: end;
+	
+	
 	color: #A8A8A8;
 }
 
