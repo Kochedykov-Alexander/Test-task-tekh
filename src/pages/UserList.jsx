@@ -26,7 +26,7 @@ export default function UserList() {
 	  })
 
 	useEffect(() => {
-		fetchUsers()
+		fetchUsers()	
 	}, [])
 
 	return (

@@ -31,7 +31,7 @@ export default function User({user, modalActive, setModalActive}) {
 							<div className="item__name col-12 col-md-2 my-1">{user.fname} {user.name.charAt(0)}. {user.mname.charAt(0)}.</div>
 							<div className="item__balance col-12 col-md-2 my-1">Баланс: {Math.round(user.balance * Math.pow(10, 2)) / Math.pow(10, 2)}</div>
 							<div className="item__last-updated col-12 col-md-5 my-1">Последнее изменение: {moment(user.lastUpdatedAt).fromNow()}</div>
-							<div class="item__dropdown col-12 col-md-2 my-1" onClick = {e => e.stopPropagation()}>
+							<div class="item__dropdown-2 col-12 col-md-2 my-1" onClick = {e => e.stopPropagation()}>
 								<button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
 									{statusMap.get(user.status)}
 								</button>

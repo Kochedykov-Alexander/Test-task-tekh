@@ -9,17 +9,12 @@ ul {
 
 .user__item {
 	
-	/* display: grid; */
+
 	justify-content: center;
 	align-items: center; 
 	background: #FFFFFF;
 	border-radius: 4px;
 	padding: 16px 16px;
-	/* row-gap: 18px;
-	column-gap: 40px;
-	grid-template-columns: auto auto auto 1fr auto;
-	grid-auto-flow: row;
-	grid-template-areas: "logo name balanc updated dropdown"; */
 	font-size: calc(7.5px + 7.5 * (100vw / 1920));
 	line-height: 133%;
 	cursor: pointer;
@@ -50,9 +45,12 @@ ul {
 	grid-area: balanc;
 }
 
-.item__dropdown {
+.item__dropdown-2 {
+	border: none;
+	color: #3F3356;
 	text-align: end;
 	grid-area: dropdown;
+	border: none;
 }
 
 .item__last-updated {
@@ -60,3 +58,7 @@ ul {
 	text-align: end;
 	color: #A8A8A8;
 }
+
+
+
+
