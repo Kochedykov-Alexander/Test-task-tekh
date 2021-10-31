@@ -1,6 +1,7 @@
 import React from 'react'
 import '../../../scss/modal.css'
 import { statusMap } from '../../User'
+import styles from '../../../scss/modal.module.scss'
 
 export default function Modal({modalActive, setModalActive, requiredItem, setReruiredItem}) {
 

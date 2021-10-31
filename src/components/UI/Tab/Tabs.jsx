@@ -1,6 +1,6 @@
 import React from 'react'
 import TabContent from './TabContent';
-import '../../../scss/tabs.css'
+import styles from '../../../scss/tab.module.scss'
 
 export default function Tabs({ items }) {
 
@@ -10,11 +10,11 @@ export default function Tabs({ items }) {
   
 	return (
 	  <div>
-		<div className="tab">
-			<div className="tab__links">
+		<div className={styles.tab}>
+			<div className={styles.tab__links}>
 				{items.map((n, i) => (
 					<button
-					className={`tab__button ${i === active ? 'active mx-3' : 'mx-3'}`}
+					className={`${styles.tab__button} ${i === active ?  styles.active + ' mx-3' : ' mx-3'}`}
 					onClick={openTab}
 					data-index={i}
 					>{n.title}</button>
