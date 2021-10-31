@@ -7,7 +7,7 @@ import 'moment/locale/ru';
 
 
 
-export default function User({user, modalActive, setModalActive}) {
+export default function User({user, modalActive, setModalActive, getSelected}) {
 
 	let statusMap = new Map([
 		[0, "Подписка активна"],
@@ -24,7 +24,7 @@ export default function User({user, modalActive, setModalActive}) {
 	
 	return (
 				<div className="user__column">
-						<li className="user__item item row d-md-flex flex-direction-md-column .align-items-md-center" key={user.id} onClick={() => setModalActive(true)}>
+						<li className="user__item item row d-md-flex flex-direction-md-column .align-items-md-center" key={user.id} onClick={() => getSelected(user)}>
 							<div className="item__image col-12 col-md-1">
 								<img src={avatar} alt="" />
 							</div>
@@ -37,12 +37,12 @@ export default function User({user, modalActive, setModalActive}) {
 								</button>
 							<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
 								{statusMap.forEach((value, key) => {<li><a class={statusMap.get(key) === statusMap.get(user.status) ? "dropdown-item" : "dropdown-item disabled"} href="#">{statusMap.get(key)}</a></li>})}
-							
+								
 							</ul>
 							</div>
 							
 						</li>
-						<Modal user = {user} modalActive = {modalActive} setModalActive = {setModalActive}/>
+						
 					</div>
 				
 				

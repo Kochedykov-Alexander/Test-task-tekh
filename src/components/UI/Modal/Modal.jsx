@@ -1,17 +1,17 @@
 import React from 'react'
 import '../../..//scss/modal.css'
 
-export default function Modal({modalActive, setModalActive, user}) {
+export default function Modal({modalActive, setModalActive, requiredItem}) {
 	return (
-		<div className={modalActive ? "modal active px-3" : "modal px-3"} onClick = {() => setModalActive(false)} > 
-			<div className={modalActive ? "modal__content active content" : "modal__content content"} onClick = {e => e.stopPropagation()}>
+		<div className={modalActive ? "modal active px-3" : "modal px-3"}> 
+			<div className={modalActive ? "modal__content active content" : "modal__content content"}>
 				<div className="content__column column d-flex flex-column justify-content-between">
 					<div className="column__top">
 						<div className="content__header">
 							<div className="content__title">
-								Иванов Иван
+								{requiredItem.name}
 							</div>
-							<div className="content__close">
+							<div className="content__close" onClick = {() => setModalActive(false)} >
 								<span class="close"></span>
 							</div>
 							
