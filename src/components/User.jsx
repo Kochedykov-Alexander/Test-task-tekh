@@ -29,7 +29,7 @@ export default function User({user, getSelected}) {
 				<div className={styles.item__balance + " col-12 col-md-2 my-0 text-md-start text-center"}>Баланс: {Math.round(user.balance * Math.pow(10, 2)) / Math.pow(10, 2)}</div>
 				<div className={styles.item__last_updated + " col-12 col-md-5 my-1 text-md-end text-center"}>Последнее изменение: {moment(user.lastUpdatedAt).fromNow()}</div>
 				<div className={styles.item__dropdown_2 + " col-12 col-md-2 my-1 text-md-end text-center"} onClick = {e => e.stopPropagation()}>
-					<button className="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+					<button className={styles.btn + " btn dropdown-toggle"} type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
 						{statusMap.get(user.status)}
 					</button>
 					<ul className={styles.dropdown_menu + " dropdown-menu"} aria-labelledby="dropdownMenuButton1">

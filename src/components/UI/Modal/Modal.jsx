@@ -40,7 +40,7 @@ export default function Modal({modalActive, setModalActive, requiredItem, setRer
 								<button className="btn dropdown-toggle dropdown__btn d-flex justify-content-between align-items-center col-12" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
 									{statusMap.get(requiredItem?.status)}
 								</button>
-								<ul className="dropdown-menu col-12 col-md-4 mx-md-3 mx-0" aria-labelledby="dropdownMenuButton1">
+								<ul className="dropdown_menu dropdown-menu col-12 col-md-4 mx-md-3 mx-0" aria-labelledby="dropdownMenuButton1">
 									<li><a className={0 === requiredItem?.status ? "dropdown-item" : "dropdown-item disabled"} href="/#">{statusMap.get(0)}</a></li>
 									<li><a className={1 === requiredItem?.status ? "dropdown-item" : "dropdown-item disabled"} href="/#">{statusMap.get(1)}</a></li>
 									<li><a className={2 === requiredItem?.status ? "dropdown-item" : "dropdown-item disabled"} href="/#">{statusMap.get(2)}</a></li>
