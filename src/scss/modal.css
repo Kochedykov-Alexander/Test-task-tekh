@@ -4,13 +4,13 @@
 	position: fixed;
 	top: 0;
 	left: 0;
-	background: rgba(63, 51, 86, 0.04);
+	background: rgba(63, 51, 86, 0.4);
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	opacity: 0;
 	pointer-events: none;
-	transition: all 0s;	
+	transition: all 1s;	
 }
 
 .modal.active {
@@ -26,7 +26,7 @@
 	border-radius: 12px;
 	transform: scale(0.5);
 	margin: 0 15px;
-	transition: 0s all;
+	transition: 1s all;
 }
 
 

@@ -12,7 +12,7 @@ export const statusMap = new Map([
 	[2, "Заблокирован"]
 ]);
 
-export default function User({user, modalActive, setModalActive, getSelected, requiredItem, setReruiredItem}) {
+export default function User({user, getSelected}) {
 
 	
 
@@ -42,7 +42,7 @@ export default function User({user, modalActive, setModalActive, getSelected, re
 			</li>
 
 			
-				<Modal setReruiredItem = {setReruiredItem} requiredItem = {requiredItem} modalActive = {modalActive} setModalActive = {setModalActive}/>
+			
 			
 
 		</div>			
