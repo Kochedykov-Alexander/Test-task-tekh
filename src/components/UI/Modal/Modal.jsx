@@ -1,7 +1,7 @@
 import React from 'react'
 import '../../../scss/modal.css'
 import { statusMap } from '../../User'
-import styles from '../../../scss/modal.module.scss'
+
 
 export default function Modal({modalActive, setModalActive, requiredItem, setReruiredItem}) {
 
@@ -13,7 +13,7 @@ export default function Modal({modalActive, setModalActive, requiredItem, setRer
 					<div className="column__top">
 						<div className="content__header">
 							<div className="content__title">
-								{requiredItem.fname} {requiredItem.name}
+								{requiredItem?.fname} {requiredItem?.name}
 							</div>
 							<div className="content__close" onClick = {() => {
 								setModalActive(false)
@@ -28,22 +28,22 @@ export default function Modal({modalActive, setModalActive, requiredItem, setRer
 				
 						<div className="content__item item row gy-5">
 							<div className="item__surname col-12 col-md-3 mx-md-3 mx-0">
-								{requiredItem.fname}
+								{requiredItem?.fname}
 							</div>
 							<div className="item__name col-12 col-md-3 mx-md-3 mx-0">
-								{requiredItem.name}
+								{requiredItem?.name}
 							</div>
 							<div className="item__patronymic col-12 col-md-3 mx-md-3 mx-0">
-								{requiredItem.mname}
+								{requiredItem?.mname}
 							</div>
 							<div className="item__dropdown dropdown col-12 col-md-3 mx-md-3 mx-0">
 								<button className="btn dropdown-toggle dropdown__btn d-flex justify-content-between align-items-center col-12" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-									{statusMap.get(requiredItem.status)}
+									{statusMap.get(requiredItem?.status)}
 								</button>
 								<ul className="dropdown-menu col-12 col-md-4 mx-md-3 mx-0" aria-labelledby="dropdownMenuButton1">
-									<li><a className={0 === requiredItem.status ? "dropdown-item" : "dropdown-item disabled"} href="/#">{statusMap.get(0)}</a></li>
-									<li><a className={1 === requiredItem.status ? "dropdown-item" : "dropdown-item disabled"} href="/#">{statusMap.get(1)}</a></li>
-									<li><a className={2 === requiredItem.status ? "dropdown-item" : "dropdown-item disabled"} href="/#">{statusMap.get(2)}</a></li>
+									<li><a className={0 === requiredItem?.status ? "dropdown-item" : "dropdown-item disabled"} href="/#">{statusMap.get(0)}</a></li>
+									<li><a className={1 === requiredItem?.status ? "dropdown-item" : "dropdown-item disabled"} href="/#">{statusMap.get(1)}</a></li>
+									<li><a className={2 === requiredItem?.status ? "dropdown-item" : "dropdown-item disabled"} href="/#">{statusMap.get(2)}</a></li>
 								</ul>
 							</div>
 						</div>

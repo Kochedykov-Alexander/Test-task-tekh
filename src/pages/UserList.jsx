@@ -6,6 +6,7 @@ import Tabs from '../components/UI/Tab/Tabs';
 import { useFetching } from '../hooks/useFetching';
 import { setUsers } from '../store/reducers/usersReducer';
 
+
 export default function UserList() {
 
 	
@@ -24,6 +25,7 @@ export default function UserList() {
 		dispatch(setUsers(usersApi));
 	  })
 
+	  
 	  
 
 	useEffect(() => {

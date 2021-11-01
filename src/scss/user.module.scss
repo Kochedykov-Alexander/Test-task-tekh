@@ -5,8 +5,8 @@ ul {
 .user {
 
     &__list > * {
-	margin-top: 18px;
-	box-shadow: 0px 7px 64px rgba(0, 0, 0, 0.07);
+        margin-top: 18px;
+        box-shadow: 0px 7px 64px rgba(0, 0, 0, 0.07);
     }
 
     &__item {
@@ -42,7 +42,7 @@ ul {
     }
 
     &__dropdown_2 {
-        border: none;
+    
         color: #3F3356;
         border: none;
     }
@@ -62,5 +62,7 @@ ul {
 	outline: none !important;
    	box-shadow:none
 }
+
+
     
 

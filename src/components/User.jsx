@@ -1,10 +1,10 @@
 import React from 'react'
 import avatar from '../resources/img/avatar.png'
-import '../scss/user.css'
 import moment from 'moment'
 import 'moment/locale/ru';
 import Modal from './UI/Modal/Modal';
 import styles from '../scss/user.module.scss'
+
 
 export const statusMap = new Map([
 	[0, "Подписка активна"],
@@ -41,9 +41,9 @@ export default function User({user, modalActive, setModalActive, getSelected, re
 				
 			</li>
 
-			{requiredItem &&
+			
 				<Modal setReruiredItem = {setReruiredItem} requiredItem = {requiredItem} modalActive = {modalActive} setModalActive = {setModalActive}/>
-			}
+			
 
 		</div>			
 			
